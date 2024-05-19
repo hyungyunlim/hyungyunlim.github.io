@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: http://hyungyunlim.github.io/sitemap.xml

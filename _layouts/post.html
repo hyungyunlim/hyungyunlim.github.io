@@ -1,0 +1,37 @@
+---
+layout: default
+---
+
+<div class="post">
+  <div class="post-info">
+    {% if page.date %}
+      <time datetime="{{ page.date }}">{{ page.date | date: "%Y년 %m월 %d일" }}</time>
+    {% endif %}
+  </br>
+    <span>{{ page.author }}&nbsp;</span>
+
+  </div>
+
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-line"></div>
+
+
+  {{ content }}
+
+<div align="center">
+<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
+</div>
+<!-- add facebook comment -->
+  <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%"></div>
+</div>
+
+<div class="pagination">
+  {% if page.next.url %}
+    <a href="{{ page.next.url | prepend: site.url }}" class="left arrow">&#8592;</a>
+  {% endif %}
+  {% if page.previous.url %}
+    <a href="{{ page.previous.url | prepend: site.url }}" class="right arrow">&#8594;</a>
+  {% endif %}
+
+  <a href="#" class="top">Top</a>
+</div>

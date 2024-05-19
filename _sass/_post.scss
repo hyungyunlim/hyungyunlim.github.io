@@ -1,0 +1,40 @@
+.post {
+  padding: 3rem 0;
+
+  &-info {
+    color: $default-tint;
+    font-family: 'Noto Serif KR', sans-serif;
+    //letter-spacing: 1px;
+    text-align: center;
+    font-size: .75rem;
+
+    span {
+      font-style: italic;
+    }
+  }
+
+  &-title {
+    color: $default-shade;
+    font-family: 'Noto Serif KR', sans-serif;
+    font-size: 1.75rem;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  &-line {
+    border-top: .4rem solid $default-shade;
+    display: block;
+    margin: 0 auto 3rem;
+    width: 4rem;
+  }
+
+  p {
+    margin: 0 0 1rem;
+    text-align: left;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+}

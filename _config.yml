@@ -1,0 +1,36 @@
+# Permalinks
+permalink:      /:year-:month-:day/:title
+
+# Setup
+title:          junlim's blog
+paginate:       15
+baseurl:        ""
+url:            "https://hyungyunlim.github.io"
+
+# Assets
+sass:
+  style: compressed
+  implementation: sass
+
+# Build settings
+markdown:       kramdown
+
+# About
+author:
+  name:         Jun
+  url:          https://hyungyunlim.github.io
+  email:        hyungyun.lim@gmail.com
+
+# Custom vars
+version:        3.4.1
+github:
+  repo:         https://github.com/hyungyunlim/hyungyunlim.github.io
+
+# Gems
+plugins:
+  - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+
+
+github: [metadata]

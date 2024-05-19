@@ -1,0 +1,49 @@
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="fb:app_id" content="1447391898650771" />
+  <script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="/js/jquery.fitvids.js"></script>
+  <script type="text/javascript" src="/js/bigfoot.min.js"></script>
+  <script type="text/javascript">
+	    var bigfoot = $.bigfoot(
+	        {
+	        actionOriginalFN: "ignore",
+	        positionContent: "false",
+	        allowMultipleFN: "true",
+	        activateOnHover: "true",
+	        deleteOnUnhover: "true"
+	        }
+	    );
+	 </script>
+
+   <script>
+     $(document).ready(function(){
+       // Target your .container, .wrapper, .post, etc.
+       $(".post").fitVids();
+     });
+   </script>
+
+  <title>
+    {% if page.title == "Home" %}
+      {{ site.title }}
+    {% else %}
+      {{ page.title }} &middot; {{ site.title }}
+    {% endif %}
+  </title>
+
+  {% feed_meta %}
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
+
+  <!-- You can use Open Graph tags to customize link previews.
+     Learn more: https://developers.facebook.com/docs/sharing/webmasters -->
+  <meta property="fb:app_id" content="{{ site.facebook_app_id }}" />
+  <meta property="og:url"           content="{{ site.url }}/{{ page.url }}" />
+  <meta property="og:type"          content="article" />
+  <meta property="og:title"         content="{{ page.title }}" />
+  <meta property="og:description"   content="{{ page.content | markdownify | strip_html | strip_newlines | truncate: 300 }}" />
+  <meta property="og:image"         content="{{ site.url }}/{{ page.image }}" />
+</head>

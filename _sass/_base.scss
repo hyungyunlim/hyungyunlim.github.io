@@ -1,0 +1,94 @@
+* {
+  @include box-sizing;
+  line-height: 1.6;
+}
+
+html,
+body {
+  color: $default-color;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: 'Noto Serif KR', sans-serif;
+  font-size: 18px;
+
+  @media (min-width: 600px) {
+    font-size: 20px;
+  }
+}
+
+body {
+  -webkit-text-size-adjust: 100%;
+}
+
+h1,
+h2,
+h4,
+h5,
+h6 {
+  color: $default-shade;
+  font-family: 'Noto Serif KR', sans-serif;
+  line-height: normal;
+}
+
+h3 {
+  line-height: 1.8;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+blockquote {
+  border-left: 0.25rem solid $grey-2;
+  color: $grey-1;
+  margin: .8rem 0;
+  margin-left: 2rem;
+  padding: .5rem 1rem;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 600px) {
+    padding: 0 5rem 0 1.25rem;
+  }
+}
+
+img {
+  border: 0.1px solid;
+  border-color: #d3d3d3;
+  display: block;
+  // margin: 0 0 1rem;
+  max-width: 95%;
+}
+
+td {
+  vertical-align: top;
+}
+
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
+
+figure {
+  align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+figure figcaption {
+  text-align: center;
+  font-style: italic;
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.fb-like {
+  margin-bottom:50px;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  {% include head.html %}
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bigfoot-default.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/bigfoot-number.css">
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
+        </a>
+        <ul>
+          <li><a href="{{ '/about' | prepend: site.url }}">소개</a></li>
+          <li><a href="{{ site.baseurl }}/">블로그</a></li>
+          <li><a href="{{ '/archive' | prepend: site.url }}">아카이브</a></li>
+        </ul>
+    </div>
+  </nav>
+
+    <main>
+      {{ content }}
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=1447391898650771";
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, "script", "facebook-jssdk"));</script>
+    </main>
+
+    <footer>
+      <span>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}
+      </span>
+    </footer>
+
+<!-- Google Analytics Testing 환경 데이터 제외하기 -->
+    {% if jekyll.environment == 'production' %}
+    {% include analytics.html %}
+    {% endif %}
+    <!--끝 -->
+  </body>
+</html>
