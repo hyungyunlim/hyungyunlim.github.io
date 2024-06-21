@@ -93,6 +93,7 @@ figure figcaption {
   margin-bottom:50px;
 }
 
-.fb-comments {
-  max-width: 100% !important;
+.fb-comments iframe[style] {
+  width: 100% !important;
 }
+
