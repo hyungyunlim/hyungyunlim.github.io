@@ -1,6 +1,7 @@
 ---
 title: 옵시디언 테스팅3
 date: 2025-06-27
+filename: “2025-06-27-{{title}}”
 categories:
   - 생산성
 tags:
