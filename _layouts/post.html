@@ -18,11 +18,10 @@ layout: default
 
   {{ content }}
 
-<div align="center">
-<div class="fb-like" data-href="{{ site.url }}{{ page.url }}" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="true"></div>
-</div>
-<!-- add facebook comment -->
-  <div class="fb-comments" data-href="{{ site.url }}{{ page.url }}" data-width="100%" style="width: 100% !important;"></div>
+  {% if page.comments %}
+    <div id="giscus-comments"></div>
+    {% include comments/giscus.html %}
+  {% endif %}
 </div>
 
 <div class="pagination">

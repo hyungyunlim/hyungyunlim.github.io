@@ -17,6 +17,13 @@ markdown:       kramdown
 future:         true
 repository:     hyungyunlim/hyungyunlim.github.io
 
+defaults:
+  - scope:
+      path: "_posts"
+      type: "posts"
+    values:
+      comments: true
+
 # About
 author:
   name:         Jun
@@ -33,3 +40,12 @@ plugins:
   - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
+
+# Comments
+comments:
+  active: giscus
+  giscus:
+    repo: hyungyunlim/hyungyunlim.github.io
+    repo_id: MDEwOlJlcG9zaXRvcnk5MzkwNzYxNQ==
+    category: General
+    category_id: DIC_kwDOBZjqn84CsS5J
